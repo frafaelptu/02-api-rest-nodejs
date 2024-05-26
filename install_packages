@@ -1,0 +1,52 @@
+#inicializar um projeto nodejs
+npm init -y
+
+#configurar typescript no projeto 
+# na pasta bin dentro de node_modules tera o arquivo tsc
+npm i -D typescript
+
+#criar tsconfig.json 
+npx tsc --init
+
+#ajustar es2020 no arquivo criado tsconfig.json
+
+#instalar fastify
+npm i fastify
+
+#instalar types para node em desenvolvimento
+ npm i -D @types/node 
+
+# vitest paa testes
+ npm i -D vitest
+
+ # supertest
+npm i -D supertest
+npm i -D @types/supertest
+ #converter ts para js
+  npx tsc src/server.ts
+
+#instalar tsx para executar o arquivo ts em ambiente de desenvolvimento
+npm i tsx -D 
+
+#configurar script package.json para executar o arquivo ts
+"dev": "tsx watch src/server.ts"
+
+#em ambiente de produção deverá converter o arquivo ts para js usar ts somente para desenvolvimento
+
+#configurar esclint e preset da rocketseat 
+ npm i eslint @rocketseat/eslint-config -D
+
+#criar arquivo .eslintrc.js
+
+{
+    "extends": [
+        "@rocketseat/eslint-config/node"
+    ]
+}
+
+#configurs vscode para formatar o codigo
+ctrl + shift + p e incluir o comando format document with
+
+ "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
